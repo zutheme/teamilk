@@ -94,7 +94,7 @@
 							{{ $product[0]['short_desc'] }}
 						</div>
 						<div class="row c-product-variant">
-							<div class="col-sm-12 col-xs-12">
+							<div class="col-sm-12 col-xs-12" style="display: none">
 								<p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Size:</p>
 								<div class="c-product-size">
 									<div class="item">
@@ -121,7 +121,7 @@
 								<div class="c-product-topping"> 
 									{{-- <p class="c-product-meta-label c-font-uppercase c-font-bold">Món thêm:</p> --}}
 									<div class="dropdown">
-									    <button class="btn btn-primary btn-lg dropdown-toggle drop-topping" type="button" data-toggle="dropdown">Chọn món thêm
+									    <button class="btn btn-primary btn-lg dropdown-toggle drop-topping" type="button" data-toggle="dropdown">Sản phẩm phụ
 									    <span class="caret"></span></button>
 									    <ul class="dropdown-menu">
 									    	@foreach($sel_topping as $item)
