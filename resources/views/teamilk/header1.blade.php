@@ -194,10 +194,9 @@
                             <li class="c-menu-type-classic"><a href="javascript:;" class="c-link dropdown-toggle">Sản phẩm<span class="c-arrow c-toggler"></span></a>
 
                             <ul class="dropdown-menu c-menu-type-classic c-pull-left">
-
-                             @foreach($rs_cat_product as $row)
-                                <li><a href="#">{{ $row['namecat'] }}</a></li>
-                             @endforeach
+                                @foreach($rs_cat_product as $row)
+                                    <li><a href="#">{{ $row['namecat'] }}</a></li>
+                                @endforeach
                               </ul>
                                 </li>
                                 <li>
@@ -220,31 +219,20 @@
                             <!-- BEGIN: MOBILE VERSION OF THE TAB MEGA MENU -->
 
                             <ul class="dropdown-menu c-menu-type-mega c-visible-mobile">
-
                                 <li class="dropdown-submenu">
-
                                     <a href="javascript:;">Jango Components<span class="c-arrow c-toggler"></span></a>
-
                                     <div class="dropdown-menu">
-
-                                      
-
                                     </div>
-
                                 </li>
                             </ul>
 
                             <!-- END: MOBILE VERSION OF THE TAB MEGA MENU -->
                                 </li>
                             <li class="c-search-toggler-wrapper">
-
                                 <a href="#" class="c-btn-icon c-search-toggler"><i class="fa fa-search"></i></a>
-
                             </li>
                             <li class="c-cart-toggler-wrapper">
-
                                 <a href="{{ url('teamilk/shopcart') }}" class="c-btn-icon c-cart-toggler"><i class="icon-handbag c-cart-icon"></i> <span class="c-cart-number c-theme-bg">0</span></a>
-
                             </li>
                            <li class="user-profile">
                                 {{-- <a href="/profile/{{ Auth::id() }}">{{ Auth::user()->name }} --}}

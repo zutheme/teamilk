@@ -21,13 +21,13 @@
 	</div>
 </div><!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-2 -->
 <div class="container">
-<div class="c-layout-sidebar-menu c-theme ">
-	{{-- @include('teamilk.product.sidebar-grid') --}}
-</div>
+<!--<div class="c-layout-sidebar-menu c-theme ">
+	 {{-- @include('teamilk.product.sidebar-grid') --}}
+</div>-->
 <div class="c-layout-sidebar-content ">
 			<!-- BEGIN: PAGE CONTENT -->
 			<!-- BEGIN: CONTENT/SHOPS/SHOP-RESULT-FILTER-1 -->
-			<div class="c-shop-result-filter-1 clearfix form-inline">
+			<!--<div class="c-shop-result-filter-1 clearfix form-inline">-->
 				{{-- <div class="c-filter">
 					<label class="control-label c-font-16">Trang:</label>
 					<select class="form-control c-square c-theme c-input">
@@ -52,7 +52,8 @@
 						<option value="#?sort=p.model&amp;order=DESC">Model (Z - A)
 					</select>
 				</div> --}}
-			</div><!-- END: CONTENT/SHOPS/SHOP-RESULT-FILTER-1 -->
+			<!--</div>-->
+			<!-- END: CONTENT/SHOPS/SHOP-RESULT-FILTER-1 -->
 
 <div class="c-margin-t-20"></div>
 
@@ -98,16 +99,17 @@
 
 <div class="c-margin-t-20"></div>
 
-<ul class="c-content-pagination c-square c-theme pull-right">
+<!--<ul class="c-content-pagination c-square c-theme pull-right">
 	<li class="c-prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
 	<li><a href="#">1</a></li>
 	<li class="c-active"><a href="#">2</a></li>
 	<li><a href="#">3</a></li>
 	<li><a href="#">4</a></li>
 	<li class="c-next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
-</ul>			<!-- END: PAGE CONTENT -->
-			</div>
-		</div>
+</ul>-->
+<!-- END: PAGE CONTENT -->
+	</div>
+</div>
 @stop
 
 @section('other_scripts')
