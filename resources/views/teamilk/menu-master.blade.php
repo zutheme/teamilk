@@ -26,7 +26,7 @@
                     $span3 = '';
                 }
                 //echo '<li'.$span3.'><a href="#"'.$span1.'>'.$char.'--'.$item['namemenu'].'--'.$item['depth'].$span2.'</a>';
-                echo '<li'.$span3.'><a href="#"'.$span1.'>'.$item['namemenu'].$span2.'</a>';
+                echo '<li'.$span3.'><a href="'.url('/').'/teamilk/listproductbyidcate/'.$item['idcategory'].'/10/1/10'.'"'.$span1.'>'.$item['namemenu'].$span2.'</a>';
                 $char++;
                 show_all_menu($categories, $item['idmenuhascate'], $char); 
                 echo "</li>";

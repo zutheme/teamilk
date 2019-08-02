@@ -33,6 +33,9 @@ Route::post('admin/login', ['uses' =>'Admin\LoginController@getLogin', 'as'=>'ad
 //postlogin
 Route::get('admin/postLogin', ['uses' =>'Admin\LoginController@postLogin', 'as'=>'admin']);
 Route::post('admin/postLogin', ['uses' =>'Admin\LoginController@postLogin', 'as'=>'admin']);
+//list product by idcategory
+Route::get('teamilk/listproductbyidcate/{_idcategory}/{_id_post_type}/{_id_status_type}/{_limit}', ['uses' =>'teamilk\ProductController@listviewproductbyidcate']);
+Route::post('teamilk/listproductbyidcate/{_idcategory}/{_id_post_type}/{_id_status_type}/{_limit}', ['uses' =>'teamilk\ProductController@listviewproductbyidcate']);
 //add cart
 Route::get('teamilk/shopcart', ['uses' =>'teamilk\ShopCartController@index']);
 Route::post('teamilk/shopcart', ['uses' =>'teamilk\ShopCartController@index']);

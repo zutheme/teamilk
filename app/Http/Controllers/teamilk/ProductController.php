@@ -127,4 +127,16 @@ class ProductController extends Controller
             return response()->json($errors); 
         }
     }
+    public function listviewproductbyidcate($_idcategory, $_id_post_type, $_id_status_type, $_limit){
+        try {
+            $qr_lpro = DB::select('call ListViewProductByIdCateProcedure(?,?,?,?)',array($_idcategory, $_id_post_type, $_id_status_type, $_limit));
+            $rs_lpro = json_decode(json_encode($qr_lpro), true);     
+            //return redirect()->route('teamilk.product.index')->with('error',$errors);
+             return view('teamilk.product.index')->with(compact('rs_lpro'));
+        } catch (\Illuminate\Database\QueryException $ex) {
+            $errors = new MessageBag(['error' => $ex->getMessage()]);
+            //return redirect()->route('teamilk.product.index')->with('error',$errors);
+            return view('teamilk.product.index')->with('error',$errors);
+        }
+    }
 }

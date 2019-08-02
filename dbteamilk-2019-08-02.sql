@@ -5,13 +5,13 @@
  Source Server Type    : MySQL
  Source Server Version : 100133
  Source Host           : localhost:3306
- Source Schema         : dichvu
+ Source Schema         : dbteamilk
 
  Target Server Type    : MySQL
  Target Server Version : 100133
  File Encoding         : 65001
 
- Date: 30/07/2019 17:44:52
+ Date: 02/08/2019 16:19:04
 */
 
 SET NAMES utf8mb4;
@@ -43,7 +43,7 @@ CREATE TABLE `categories`  (
   `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`idcategory`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of categories
@@ -77,6 +77,8 @@ INSERT INTO `categories` VALUES (26, NULL, 'Cấy tinh chất collagen tươi x�
 INSERT INTO `categories` VALUES (27, NULL, 'Sản phẩm', 4, 0, NULL, NULL, '2019-07-09 11:41:38', '2019-07-14 22:28:26');
 INSERT INTO `categories` VALUES (28, NULL, 'Giảm béo', 4, 0, NULL, NULL, '2019-07-14 21:50:28', '2019-07-14 22:28:26');
 INSERT INTO `categories` VALUES (29, NULL, 'Trị thâm', 4, 0, NULL, NULL, '2019-07-14 21:57:55', '2019-07-14 22:28:26');
+INSERT INTO `categories` VALUES (30, NULL, 'mgk.edu.vn', 2, 0, NULL, NULL, '2019-08-01 14:59:17', '2019-08-02 10:22:16');
+INSERT INTO `categories` VALUES (31, NULL, 'Nhập hàng', 5, 0, NULL, NULL, '2019-08-02 10:08:41', '2019-08-02 10:08:41');
 
 -- ----------------------------
 -- Table structure for category_types
@@ -239,7 +241,7 @@ CREATE TABLE `depart_employees`  (
   `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`iddepart_employee`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of depart_employees
@@ -253,6 +255,13 @@ INSERT INTO `depart_employees` VALUES (10, 15, 3, '2019-05-08 22:13:47', '2019-0
 INSERT INTO `depart_employees` VALUES (11, 16, 8, '2019-05-17 09:36:04', '2019-05-17 09:36:04');
 INSERT INTO `depart_employees` VALUES (12, 17, 6, '2019-05-17 09:36:49', '2019-05-17 09:36:49');
 INSERT INTO `depart_employees` VALUES (13, 18, 4, '2019-05-17 09:39:23', '2019-05-17 09:39:23');
+INSERT INTO `depart_employees` VALUES (14, 23, 3, '2019-08-01 16:40:26', '2019-08-01 16:40:26');
+INSERT INTO `depart_employees` VALUES (15, 24, 3, '2019-08-01 16:49:22', '2019-08-01 16:49:22');
+INSERT INTO `depart_employees` VALUES (16, 25, 3, '2019-08-01 16:49:58', '2019-08-01 16:49:58');
+INSERT INTO `depart_employees` VALUES (17, 26, 3, '2019-08-01 16:50:55', '2019-08-01 16:50:55');
+INSERT INTO `depart_employees` VALUES (18, 27, 3, '2019-08-01 16:51:50', '2019-08-01 16:51:50');
+INSERT INTO `depart_employees` VALUES (19, 28, 3, '2019-08-01 16:56:43', '2019-08-01 16:56:43');
+INSERT INTO `depart_employees` VALUES (20, 29, 3, '2019-08-01 17:50:50', '2019-08-01 17:50:50');
 
 -- ----------------------------
 -- Table structure for departments
@@ -389,14 +398,7 @@ CREATE TABLE `expposts`  (
   `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`idexppost`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 54 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of expposts
--- ----------------------------
-INSERT INTO `expposts` VALUES (51, 146, NULL, NULL, 16, NULL, NULL, 145, '2019-05-18 15:14:09', '2019-05-18 15:14:09');
-INSERT INTO `expposts` VALUES (52, 149, NULL, NULL, 2, NULL, NULL, 148, '2019-05-21 14:54:42', '2019-05-21 14:54:42');
-INSERT INTO `expposts` VALUES (53, 150, NULL, NULL, 2, NULL, NULL, 145, '2019-05-21 15:03:44', '2019-05-21 15:03:44');
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Table structure for files
@@ -411,7 +413,7 @@ CREATE TABLE `files`  (
   `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`idfile`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 469 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 470 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of files
@@ -527,6 +529,7 @@ INSERT INTO `files` VALUES (465, 'uploads/2019/07/06/20190706_1562377800_5d1ffe4
 INSERT INTO `files` VALUES (466, 'uploads/2019/07/06/20190706_1562378042_5d1fff3a38890.jpg', 'yakulkchanh.jpg', '20190706_1562378042_5d1fff3a38890.jpg', 'jpg', '2019-07-06 08:54:02', '2019-07-06 08:54:02');
 INSERT INTO `files` VALUES (467, 'uploads/2019/07/06/20190706_1562378957_5d2002cdc458f.jpg', 'tradaohoanhai.jpg', '20190706_1562378957_5d2002cdc458f.jpg', 'jpg', '2019-07-06 09:09:17', '2019-07-06 09:09:17');
 INSERT INTO `files` VALUES (468, 'uploads/2019/07/06/20190706_1562381055_5d200aff53cda.jpg', 'kem-tuyet-matcha-dau-do.jpg', '20190706_1562381055_5d200aff53cda.jpg', 'jpg', '2019-07-06 09:44:15', '2019-07-06 09:44:15');
+INSERT INTO `files` VALUES (469, 'uploads/2019/08/01/20190801_1564654544_5d42bbd010d66.png', '', '20190801_1564654544_5d42bbd010d66.png', 'png', '2019-08-01 17:15:44', '2019-08-01 17:15:44');
 
 -- ----------------------------
 -- Table structure for grants
@@ -593,28 +596,28 @@ CREATE TABLE `imp_products`  (
 -- ----------------------------
 -- Records of imp_products
 -- ----------------------------
-INSERT INTO `imp_products` VALUES (62, 68, 0, 2, 0, 21000, 29000, 38000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-02 11:35:36');
-INSERT INTO `imp_products` VALUES (63, 70, 0, 2, 1, NULL, 29000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (64, 71, 0, 2, 0, 19500, 29000, 37000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-02 11:35:01');
-INSERT INTO `imp_products` VALUES (65, 72, 0, 2, 0, 15000, 29000, 45000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-02 11:34:32');
-INSERT INTO `imp_products` VALUES (66, 73, 0, 2, 0, 18000, 29000, 37000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-02 12:04:41');
-INSERT INTO `imp_products` VALUES (67, 74, 0, 2, 0, 13000, 29000, 37000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-02 11:33:54');
-INSERT INTO `imp_products` VALUES (68, 75, 0, 2, 0, NULL, 29000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (74, 91, 0, 2, 0, NULL, 66000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (75, 92, 0, 2, 0, NULL, 2015, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (77, 94, 0, 2, 0, NULL, 40000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (78, 95, 0, 2, 0, NULL, 50000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (79, 96, 0, 2, 0, 25000, 50000, 65000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-02 11:32:45');
-INSERT INTO `imp_products` VALUES (80, 97, 0, 2, 0, 20000, 49000, 55000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-02 11:32:09');
-INSERT INTO `imp_products` VALUES (81, 98, 0, 2, 0, NULL, 50000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (82, 99, 0, 2, 0, NULL, 3000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (83, 100, 0, 2, 0, NULL, 3000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (84, 102, 0, 2, 0, NULL, 3000, NULL, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (85, 103, 0, 2, 0, 19000, 45000, 50000, '', 0, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-07-05 10:00:16');
-INSERT INTO `imp_products` VALUES (86, 104, 0, 2, 0, NULL, 28500, 37000, '', 0, 0, 0, 0, 3, '2019-07-06 08:50:00', '2019-07-06 08:50:26');
-INSERT INTO `imp_products` VALUES (87, 105, 0, 2, 0, NULL, 20000, 37000, '', 0, 0, 0, 0, 3, '2019-07-06 08:54:02', '2019-07-06 08:54:02');
-INSERT INTO `imp_products` VALUES (88, 106, 0, 2, 0, NULL, 38500, 50000, '', 0, 0, 0, 0, 3, '2019-07-06 09:09:17', '2019-07-06 09:09:17');
-INSERT INTO `imp_products` VALUES (89, 107, 0, 2, 0, NULL, 25000, 35000, '', 0, 0, 0, 0, 3, '2019-07-06 09:44:15', '2019-07-06 09:44:15');
+INSERT INTO `imp_products` VALUES (62, 68, 0, 2, 0, 21000, 29000, 38000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:32:52');
+INSERT INTO `imp_products` VALUES (63, 70, 0, 2, 1, 10000, 29000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:32:56');
+INSERT INTO `imp_products` VALUES (64, 71, 0, 2, 0, 19500, 29000, 37000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:32:59');
+INSERT INTO `imp_products` VALUES (65, 72, 0, 2, 0, 15000, 29000, 45000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:02');
+INSERT INTO `imp_products` VALUES (66, 73, 0, 2, 0, 18000, 29000, 37000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:04');
+INSERT INTO `imp_products` VALUES (67, 74, 0, 2, 0, 13000, 29000, 37000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:07');
+INSERT INTO `imp_products` VALUES (68, 75, 0, 2, 0, 10000, 29000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:09');
+INSERT INTO `imp_products` VALUES (74, 91, 0, 2, 0, 10000, 66000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:12');
+INSERT INTO `imp_products` VALUES (75, 92, 0, 2, 0, NULL, 2015, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:15');
+INSERT INTO `imp_products` VALUES (77, 94, 0, 2, 0, NULL, 40000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:18');
+INSERT INTO `imp_products` VALUES (78, 95, 0, 2, 0, NULL, 50000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:20');
+INSERT INTO `imp_products` VALUES (79, 96, 0, 2, 0, 25000, 50000, 65000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:22');
+INSERT INTO `imp_products` VALUES (80, 97, 0, 2, 0, 20000, 49000, 55000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:26');
+INSERT INTO `imp_products` VALUES (81, 98, 0, 2, 0, NULL, 50000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:28');
+INSERT INTO `imp_products` VALUES (82, 99, 0, 2, 0, NULL, 3000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:30');
+INSERT INTO `imp_products` VALUES (83, 100, 0, 2, 0, NULL, 3000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:33');
+INSERT INTO `imp_products` VALUES (84, 102, 0, 2, 0, NULL, 3000, NULL, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:35');
+INSERT INTO `imp_products` VALUES (85, 103, 0, 2, 0, 19000, 45000, 50000, '', 31, 0, 0, 0, 3, '2019-07-05 09:59:59', '2019-08-02 10:33:37');
+INSERT INTO `imp_products` VALUES (86, 104, 0, 2, 0, NULL, 28500, 37000, '', 31, 0, 0, 0, 3, '2019-07-06 08:50:00', '2019-08-02 10:33:39');
+INSERT INTO `imp_products` VALUES (87, 105, 0, 2, 0, NULL, 20000, 37000, '', 31, 0, 0, 0, 3, '2019-07-06 08:54:02', '2019-08-02 10:33:41');
+INSERT INTO `imp_products` VALUES (88, 106, 0, 2, 0, NULL, 38500, 50000, '', 31, 0, 0, 0, 3, '2019-07-06 09:09:17', '2019-08-02 10:33:44');
+INSERT INTO `imp_products` VALUES (89, 107, 0, 2, 0, NULL, 25000, 35000, '', 31, 0, 0, 0, 3, '2019-07-06 09:44:15', '2019-08-02 10:33:51');
 
 -- ----------------------------
 -- Table structure for impposts
@@ -662,11 +665,6 @@ INSERT INTO `menu_has_cate` VALUES (133, 1, 28, 0, 0, 4, 0, '2019-07-29 08:55:44
 INSERT INTO `menu_has_cate` VALUES (134, 1, 18, 133, 1, 5, 0, '2019-07-29 08:55:44', '2019-07-30 08:21:35');
 INSERT INTO `menu_has_cate` VALUES (135, 1, 19, 133, 1, 6, 0, '2019-07-29 08:55:44', '2019-07-30 08:21:35');
 INSERT INTO `menu_has_cate` VALUES (136, 1, 20, 28, 0, 7, 0, '2019-07-29 08:55:44', '2019-07-29 08:55:44');
-INSERT INTO `menu_has_cate` VALUES (137, 1, 11, 0, 0, 8, 0, '2019-07-30 08:21:52', '2019-07-30 08:21:52');
-INSERT INTO `menu_has_cate` VALUES (138, 1, 12, 137, 1, 11, 0, '2019-07-30 08:21:52', '2019-07-30 08:52:05');
-INSERT INTO `menu_has_cate` VALUES (139, 1, 13, 137, 1, 10, 0, '2019-07-30 08:21:52', '2019-07-30 08:52:05');
-INSERT INTO `menu_has_cate` VALUES (140, 1, 14, 137, 1, 12, 0, '2019-07-30 08:21:52', '2019-07-30 08:22:15');
-INSERT INTO `menu_has_cate` VALUES (141, 1, 15, 137, 1, 9, 0, '2019-07-30 08:21:52', '2019-07-30 08:22:15');
 
 -- ----------------------------
 -- Table structure for menus
@@ -695,7 +693,7 @@ CREATE TABLE `migrations`  (
   `migration` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 147 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 148 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of migrations
@@ -843,6 +841,7 @@ INSERT INTO `migrations` VALUES (143, '2019_07_27_150609_list_item_cate_by_id_me
 INSERT INTO `migrations` VALUES (144, '2019_07_27_211645_update_menu_item_by_idhas_procedure', 75);
 INSERT INTO `migrations` VALUES (145, '2019_07_28_182139_update_menu_has_cate_procedure', 75);
 INSERT INTO `migrations` VALUES (146, '2019_07_30_084741_list_cate_by_idmenu_procedure', 76);
+INSERT INTO `migrations` VALUES (147, '2019_08_02_110003_list_view_product_by_id_cate_procedure', 77);
 
 -- ----------------------------
 -- Table structure for oauth_access_tokens
@@ -879,6 +878,7 @@ INSERT INTO `oauth_access_tokens` VALUES ('0932576f7ac4ca702fd83f9c0d1181b2bb4ca
 INSERT INTO `oauth_access_tokens` VALUES ('096218f4c8508b93d23381d4d757b6a898a5f7f57d775802d3c7781cb095559f9c710fcbaa7f88f2', 2, 1, 'MyApp', '[]', 0, '2019-04-26 09:06:09', '2019-04-26 09:06:09', '2020-04-26 09:06:09');
 INSERT INTO `oauth_access_tokens` VALUES ('0a4c7a79b0a3f46cd45270bb3473c86f1c8f55fdf1ca06a038722871509ec00d9a6c5ddd7db3c097', 2, 1, 'MyApp', '[]', 0, '2019-06-24 16:23:04', '2019-06-24 16:23:04', '2020-06-24 16:23:04');
 INSERT INTO `oauth_access_tokens` VALUES ('0b60a19cd4c3ba274cb06a8ae770000add99ba97d47448883fd4c44f84e7f588ea40eb7fa3ec1795', 2, 1, 'MyApp', '[]', 0, '2019-05-16 21:38:22', '2019-05-16 21:38:22', '2020-05-16 21:38:22');
+INSERT INTO `oauth_access_tokens` VALUES ('0c4180dee3e171b7f1cbec9e01101d1e92d26832430d1e1641434ae24fd31c45569db9ff726ffb75', 18, 1, 'MyApp', '[]', 0, '2019-08-01 08:30:02', '2019-08-01 08:30:02', '2020-08-01 08:30:02');
 INSERT INTO `oauth_access_tokens` VALUES ('0f756d73a4677ca66d5ac5ccf63c56c39f2a0fc36a40b78bebe93604cf4bf291f7afbfcfdf9cda0f', 18, 1, 'MyApp', '[]', 0, '2019-05-17 09:39:23', '2019-05-17 09:39:23', '2020-05-17 09:39:23');
 INSERT INTO `oauth_access_tokens` VALUES ('10efb86325f09f6027e678077a974b501933c092c6a33c6c22e1f00865f85ac350f9228e25a6a1ff', 17, 1, 'MyApp', '[]', 0, '2019-05-20 08:56:22', '2019-05-20 08:56:22', '2020-05-20 08:56:22');
 INSERT INTO `oauth_access_tokens` VALUES ('114792509f5c33ac5ae710663876d91eeea6885676508e9e22b0c6b41f1d287451383592a789d6e7', 2, 1, 'MyApp', '[]', 0, '2019-05-13 15:16:00', '2019-05-13 15:16:00', '2020-05-13 15:16:00');
@@ -891,14 +891,17 @@ INSERT INTO `oauth_access_tokens` VALUES ('12c7eb54fd88206c647ec1a9018e4f870c367
 INSERT INTO `oauth_access_tokens` VALUES ('132273c7c1c6c977a2f62bf0ee7d1d9dd8cac7bf07808d3efbe0000e01e3a2f1c1739f6ce7e2ab90', 2, 1, 'MyApp', '[]', 0, '2019-07-04 12:00:01', '2019-07-04 12:00:01', '2020-07-04 12:00:01');
 INSERT INTO `oauth_access_tokens` VALUES ('14fadc8eb48e6f841b30759cd1619ff57deb7ffb0367940679e96a3c6b0a204ed138576e294b04d1', 2, 1, 'MyApp', '[]', 0, '2019-04-25 11:28:06', '2019-04-25 11:28:06', '2020-04-25 11:28:06');
 INSERT INTO `oauth_access_tokens` VALUES ('15bdcc909e0762864865a6b43e54606a85174db18475ad51a94f3ad6a51131dba8bbd7a2726f11ec', 17, 1, 'MyApp', '[]', 0, '2019-05-18 10:00:03', '2019-05-18 10:00:03', '2020-05-18 10:00:03');
+INSERT INTO `oauth_access_tokens` VALUES ('16fe0af2ab1657be8e59aca0b4008d8eb9abbc6afdcc722dd0132c98888149e5e9dec2a4e726cda9', 2, 1, 'MyApp', '[]', 0, '2019-08-01 08:29:57', '2019-08-01 08:29:57', '2020-08-01 08:29:57');
 INSERT INTO `oauth_access_tokens` VALUES ('1794dcd211c487d12089c4edde48cb58c0aec2fcfb794f1efefdd6005c1867c6bd964d8872b8d635', 2, 1, 'MyApp', '[]', 0, '2019-06-22 13:36:52', '2019-06-22 13:36:52', '2020-06-22 13:36:52');
 INSERT INTO `oauth_access_tokens` VALUES ('17b21775cf6079c603283918bb55014cb927a5d2a6b997667f583498cb6301635ace8c2f39f15360', 2, 1, 'MyApp', '[]', 0, '2019-04-27 08:36:55', '2019-04-27 08:36:55', '2020-04-27 08:36:55');
 INSERT INTO `oauth_access_tokens` VALUES ('1965204fe3ef4e6e544b64b1ecb76d6e15f8a9a48139d910616d35f7107a44f12057969a6b7aa4a1', 2, 1, 'MyApp', '[]', 0, '2019-07-06 08:36:46', '2019-07-06 08:36:46', '2020-07-06 08:36:46');
 INSERT INTO `oauth_access_tokens` VALUES ('1a0d2c5b55c8eae6c89a0768a6042d6f3edbed863d9c28852b0b76566134a1970a6f90fe678befb9', 2, 1, 'MyApp', '[]', 0, '2019-05-30 09:21:00', '2019-05-30 09:21:00', '2020-05-30 09:21:00');
 INSERT INTO `oauth_access_tokens` VALUES ('1c924153c83792025006713f21e037468db18b2c724ff404b83420811845eabf57a1d256c5f630c6', 2, 1, 'MyApp', '[]', 0, '2019-05-17 14:04:51', '2019-05-17 14:04:51', '2020-05-17 14:04:51');
 INSERT INTO `oauth_access_tokens` VALUES ('1e5c53b47c5a38423ae1c7fe3ff4f004bcd25d8f2a10b1170f445a89baa598efb0252afd18b940ae', 2, 1, 'MyApp', '[]', 0, '2019-07-09 13:36:07', '2019-07-09 13:36:07', '2020-07-09 13:36:07');
+INSERT INTO `oauth_access_tokens` VALUES ('1ec13bac250e8c2dde5c65ff9f6cd2a50e84531737a31947c2e494c7f204442284d6c7d61b9a64ba', 18, 1, 'MyApp', '[]', 0, '2019-08-01 08:35:39', '2019-08-01 08:35:39', '2020-08-01 08:35:39');
 INSERT INTO `oauth_access_tokens` VALUES ('1f736237bd5b2795b3fe4d67c70c259a800187d1262f7a682e12dc709b1255b8876529cce09fc6c4', 2, 1, 'MyApp', '[]', 0, '2019-04-25 15:15:20', '2019-04-25 15:15:20', '2020-04-25 15:15:20');
 INSERT INTO `oauth_access_tokens` VALUES ('209cb88bfa7ffebf236395e2a39de20ffe42c65d0524b7df9e45ddf9002ffe9a1c1c3c31a0312fbb', 2, 1, 'MyApp', '[]', 0, '2019-06-22 08:20:30', '2019-06-22 08:20:30', '2020-06-22 08:20:30');
+INSERT INTO `oauth_access_tokens` VALUES ('21705ddc701941ec0030e51556d727d2aba54641c93fdb9dae38e1426884f313801ebfde1bb73d76', 24, 1, 'MyApp', '[]', 0, '2019-08-01 16:49:22', '2019-08-01 16:49:22', '2020-08-01 16:49:22');
 INSERT INTO `oauth_access_tokens` VALUES ('232b3cb564badeb91709bedac2c338dad144890e9d51a39055ac0d497a4f47fb11eed976da0f7907', 2, 1, 'MyApp', '[]', 0, '2019-07-26 08:13:34', '2019-07-26 08:13:34', '2020-07-26 08:13:34');
 INSERT INTO `oauth_access_tokens` VALUES ('241b17895075f84cc18f380d036d7e5840e61f826db14c36d1397a096fc7b4782655a4b5d9f8da90', 2, 1, 'MyApp', '[]', 0, '2019-03-26 13:54:32', '2019-03-26 13:54:32', '2020-03-26 13:54:32');
 INSERT INTO `oauth_access_tokens` VALUES ('256d309a276e1b2156417da67697796a42945156e38384fbb6ae0acf7215dd7d0a22fc8d7027f913', 2, 1, 'MyApp', '[]', 0, '2019-07-05 08:30:46', '2019-07-05 08:30:46', '2020-07-05 08:30:46');
@@ -927,6 +930,7 @@ INSERT INTO `oauth_access_tokens` VALUES ('3f16c297a4305998873ead59276f56653df2a
 INSERT INTO `oauth_access_tokens` VALUES ('40b67f3d0f979692b672b5c94557e81f8a9995e7bad153b842f273f7be7fd637f61558da2f9e1071', 2, 1, 'MyApp', '[]', 0, '2019-05-15 11:35:50', '2019-05-15 11:35:50', '2020-05-15 11:35:50');
 INSERT INTO `oauth_access_tokens` VALUES ('40f1c0c6f10bad82cffed7d95de01c3fab09d34cdd57e4583c649c3cc449f11bc27d19978c649595', 2, 1, 'MyApp', '[]', 0, '2019-07-14 20:21:59', '2019-07-14 20:21:59', '2020-07-14 20:21:59');
 INSERT INTO `oauth_access_tokens` VALUES ('41db00424c7394500406d3e66a780faeff697ee15b2edee5fee1c513c5cdcd171b94689efbd789b3', 2, 1, 'MyApp', '[]', 0, '2019-07-20 08:10:36', '2019-07-20 08:10:36', '2020-07-20 08:10:36');
+INSERT INTO `oauth_access_tokens` VALUES ('4329c2b81a028ba21a9afbd2529bfa00aa397b4855e82a9c77e8f73cc42781e58c74d61bed0102b0', 2, 1, 'MyApp', '[]', 0, '2019-07-31 15:34:24', '2019-07-31 15:34:24', '2020-07-31 15:34:24');
 INSERT INTO `oauth_access_tokens` VALUES ('434881af631f2459939d5f9685fe752f8c226d47bfec2d0a3910b9c37527760e0255230781934e3d', 2, 1, 'MyApp', '[]', 0, '2019-07-12 21:59:32', '2019-07-12 21:59:32', '2020-07-12 21:59:32');
 INSERT INTO `oauth_access_tokens` VALUES ('43b9ed78e7c9778bfc62b2241119bd7e966de4b148a481282325daf5b666da51994c56e10a5563cc', 2, 1, 'MyApp', '[]', 0, '2019-05-03 20:00:48', '2019-05-03 20:00:48', '2020-05-03 20:00:48');
 INSERT INTO `oauth_access_tokens` VALUES ('43d805f5102cbb4fceed27e90da0391cc3c71749643b6f09bbaef304a24fa01992c52979f2daee3d', 2, 1, 'MyApp', '[]', 0, '2019-05-28 08:16:19', '2019-05-28 08:16:19', '2020-05-28 08:16:19');
@@ -941,10 +945,12 @@ INSERT INTO `oauth_access_tokens` VALUES ('4e45c1047743a7b6dc94130846bbaee0fd9ca
 INSERT INTO `oauth_access_tokens` VALUES ('4f056d2e9cd72c9ad50e8aea6433897ee11c07cd759a9774543bb897c527ccf17b62ad0ac96f69f7', 12, 1, 'MyApp', '[]', 0, '2019-05-07 22:47:20', '2019-05-07 22:47:20', '2020-05-07 22:47:20');
 INSERT INTO `oauth_access_tokens` VALUES ('4fbd8497ab1161001d1233a3cb1ffc6d49e2da41460f608b476b2888d66efab58e761b8c9a19f75c', 2, 1, 'MyApp', '[]', 0, '2019-04-30 22:32:09', '2019-04-30 22:32:09', '2020-04-30 22:32:09');
 INSERT INTO `oauth_access_tokens` VALUES ('4fc48a84bd46657b32ef030f4e9db4e469279a9ec80e3e329bdc2521ac248e835fd71cc587b19486', 2, 1, 'MyApp', '[]', 0, '2019-06-30 16:06:38', '2019-06-30 16:06:38', '2020-06-30 16:06:38');
+INSERT INTO `oauth_access_tokens` VALUES ('52e0d3f219394e03b94eb6e91f432b8a8ea903a5a398222ede074f08f6fc5943294d512f8edb43cf', 28, 1, 'MyApp', '[]', 0, '2019-08-01 17:02:19', '2019-08-01 17:02:19', '2020-08-01 17:02:19');
 INSERT INTO `oauth_access_tokens` VALUES ('534218dcfefb2bfed9eccaf5a3fa1065f7a3a465193b06d6bb8f24d2cc2cc5656dc3335969a66f20', 2, 1, 'MyApp', '[]', 0, '2019-06-03 21:28:59', '2019-06-03 21:28:59', '2020-06-03 21:28:59');
 INSERT INTO `oauth_access_tokens` VALUES ('54e6e5cfbd0547753525f23e7923a5e2d115f4c5fa87753ec185a22a93178a4d1f8a4c17d2c0f92a', 15, 1, 'MyApp', '[]', 0, '2019-05-11 09:27:34', '2019-05-11 09:27:34', '2020-05-11 09:27:34');
 INSERT INTO `oauth_access_tokens` VALUES ('553abd13018c51106fb3245db77b36274db4b95eddb1c61a73b1722a3dd9a312cca093c7702c8e66', 2, 1, 'MyApp', '[]', 0, '2019-05-07 18:59:18', '2019-05-07 18:59:18', '2020-05-07 18:59:18');
 INSERT INTO `oauth_access_tokens` VALUES ('5639c1e5da120bafe52a049a60419412e477a1608c1e9fa6682d40bb903d5d252697fdb7635d0f9b', 2, 1, 'MyApp', '[]', 0, '2019-04-25 08:23:43', '2019-04-25 08:23:43', '2020-04-25 08:23:43');
+INSERT INTO `oauth_access_tokens` VALUES ('583779a215b8d1595d880c603b0d8e461d06f8ff55cb92b32c04d5f6645a9d584c498e14d7af61c1', 2, 1, 'MyApp', '[]', 0, '2019-08-02 15:15:45', '2019-08-02 15:15:45', '2020-08-02 15:15:45');
 INSERT INTO `oauth_access_tokens` VALUES ('583a27a7b3b79ad1ead6e24564de574903441a703a1208587bfa4fa968b8be20a738082377b78add', 2, 1, 'MyApp', '[]', 0, '2019-05-29 17:13:17', '2019-05-29 17:13:17', '2020-05-29 17:13:17');
 INSERT INTO `oauth_access_tokens` VALUES ('587fb93867dfa81b135fe374883068761a46d74293461a0f7fbe30e5077753a3e87c48dfa6be90db', 2, 1, 'MyApp', '[]', 0, '2019-04-12 11:12:38', '2019-04-12 11:12:38', '2020-04-12 11:12:38');
 INSERT INTO `oauth_access_tokens` VALUES ('5db6b13492643a9a462c0dce4ce04a3d96df00ed18edbf0d26a1dac7d74271f69a084235734392ed', 2, 1, 'MyApp', '[]', 0, '2019-04-26 13:34:58', '2019-04-26 13:34:58', '2020-04-26 13:34:58');
@@ -955,6 +961,7 @@ INSERT INTO `oauth_access_tokens` VALUES ('62466961de48886a17f532889b3dc96ab4fcc
 INSERT INTO `oauth_access_tokens` VALUES ('637979837d6b444ddb73d3167055561ba2e8dd00d00c4c4825a5534a8d6e652388f6e612f41c886b', 2, 1, 'MyApp', '[]', 0, '2019-04-29 11:01:47', '2019-04-29 11:01:47', '2020-04-29 11:01:47');
 INSERT INTO `oauth_access_tokens` VALUES ('63dfa383a47cfa371afc20909d422671e19543c81e9d40854f0c51d889e76040a670f38f773f2ebe', 2, 1, 'MyApp', '[]', 0, '2019-04-09 08:08:54', '2019-04-09 08:08:54', '2020-04-09 08:08:54');
 INSERT INTO `oauth_access_tokens` VALUES ('64388e16751f491255693a2c8dc3138269820ee1b1e764abd125ca1fb2d808a738f92153c76931b5', 2, 1, 'MyApp', '[]', 0, '2019-03-22 14:11:53', '2019-03-22 14:11:53', '2020-03-22 14:11:53');
+INSERT INTO `oauth_access_tokens` VALUES ('64c77bdb8b11ef53adf99644e1b761241347a9932d944a27f0d981d0b1d0988d92b02c54e218db3c', 17, 1, 'MyApp', '[]', 0, '2019-08-02 08:47:12', '2019-08-02 08:47:12', '2020-08-02 08:47:12');
 INSERT INTO `oauth_access_tokens` VALUES ('67306fcdc22aa5b8443942722784fc32d985baf4151f4bcada00a8969c0a6c4ea9bc6b9a801f1b45', 2, 1, 'MyApp', '[]', 0, '2019-04-18 15:18:25', '2019-04-18 15:18:25', '2020-04-18 15:18:25');
 INSERT INTO `oauth_access_tokens` VALUES ('676d86f257186c95b4e61ef514c27bf1733b2d350dc1e0c6d404e38278c6373e085dd2a8aeeb2100', 2, 1, 'MyApp', '[]', 0, '2019-04-24 11:58:28', '2019-04-24 11:58:28', '2020-04-24 11:58:28');
 INSERT INTO `oauth_access_tokens` VALUES ('67f937dc145cbf594bd03cf24db669a8420c13a360875c64f16f62aa9f07c71b1ff2d9d14851d30c', 2, 1, 'MyApp', '[]', 0, '2019-06-09 13:55:30', '2019-06-09 13:55:30', '2020-06-09 13:55:30');
@@ -962,12 +969,14 @@ INSERT INTO `oauth_access_tokens` VALUES ('69fb3f0f3d90f7f0c5fc8af0756a85974185e
 INSERT INTO `oauth_access_tokens` VALUES ('6a5a881e83886e5de150d404f9837b5ecd784e385ae3c9ddfc20b93f0204e227f59ded804375d79c', 2, 1, 'MyApp', '[]', 0, '2019-06-10 11:21:47', '2019-06-10 11:21:47', '2020-06-10 11:21:47');
 INSERT INTO `oauth_access_tokens` VALUES ('6a8cf12646ba3a01aec38b23a3d8e898b3caa2ebc4585da90150eb9642964c77be8dccdc6d1c745f', 2, 1, 'MyApp', '[]', 0, '2019-05-29 14:54:40', '2019-05-29 14:54:40', '2020-05-29 14:54:40');
 INSERT INTO `oauth_access_tokens` VALUES ('6a8e04a0c74f204ed1225d7c19b13b15b7bee1afd94db125397ea001ebd7ae96d3643558695617a6', 2, 1, 'MyApp', '[]', 0, '2019-04-30 15:10:04', '2019-04-30 15:10:04', '2020-04-30 15:10:04');
+INSERT INTO `oauth_access_tokens` VALUES ('6dfcc3bdabe0e793737bb463b23b24d5eb7ff5207ef421c01d6fc402bbf7e8ca696e1e067661e2c1', 25, 1, 'MyApp', '[]', 0, '2019-08-01 16:49:58', '2019-08-01 16:49:58', '2020-08-01 16:49:58');
 INSERT INTO `oauth_access_tokens` VALUES ('6e98729a0c4e1e54fce7a96777dc287817a54f87519e047c0cc13b5aabe8f0df857446b0a9496fc0', 2, 1, 'MyApp', '[]', 0, '2019-04-12 15:45:29', '2019-04-12 15:45:29', '2020-04-12 15:45:29');
 INSERT INTO `oauth_access_tokens` VALUES ('6ed887714edb952c96143b8c9d33e5c545e960e24be63dcc78be6b34ed18636033e0cd11c88deda5', 2, 1, 'MyApp', '[]', 0, '2019-06-17 22:40:16', '2019-06-17 22:40:16', '2020-06-17 22:40:16');
 INSERT INTO `oauth_access_tokens` VALUES ('6f83e3687c1daaa2049f6832e39f265f2b2e59789cd56b93826e9acdcaee2e0fa9bb8b384e681c9b', 2, 1, 'MyApp', '[]', 0, '2019-07-14 19:26:08', '2019-07-14 19:26:08', '2020-07-14 19:26:08');
 INSERT INTO `oauth_access_tokens` VALUES ('724a3a57298275991328f300077a559155fa445f52fe0b6b018131702870446c3034d8ae86e1aedc', 2, 1, 'MyApp', '[]', 0, '2019-06-04 14:18:40', '2019-06-04 14:18:40', '2020-06-04 14:18:40');
 INSERT INTO `oauth_access_tokens` VALUES ('731868eada1e734c46875d5f8cd9aa7dc9ce09d010a319c3120d8e0db5b8574c7e6c199ae4b28c1c', 2, 1, 'MyApp', '[]', 0, '2019-06-06 08:19:55', '2019-06-06 08:19:55', '2020-06-06 08:19:55');
 INSERT INTO `oauth_access_tokens` VALUES ('737a7e77bd8fd489f65d343a4fdf6e0f274b709c2f543196fef2bce4bd3daf54dfa581e7dfbbe6f8', 15, 1, 'MyApp', '[]', 0, '2019-05-08 22:13:47', '2019-05-08 22:13:47', '2020-05-08 22:13:47');
+INSERT INTO `oauth_access_tokens` VALUES ('73d00ac92ef83e5ebd65713545efaaca63dc704d013c2c03e1a64b3e6cd77399c369fe17a79ce08e', 28, 1, 'MyApp', '[]', 0, '2019-08-01 17:03:32', '2019-08-01 17:03:32', '2020-08-01 17:03:32');
 INSERT INTO `oauth_access_tokens` VALUES ('77155dd2d0ecd79c4847de3822b861f1773255e1067f8fdce0ccc60ee6588cfd67069813e74d309b', 2, 1, 'MyApp', '[]', 0, '2019-05-01 08:55:11', '2019-05-01 08:55:11', '2020-05-01 08:55:11');
 INSERT INTO `oauth_access_tokens` VALUES ('796cf6d7b08cfd5dd3573bd9ca4357982b396a3a167831a97c51c5623d78b761cb29188f06a6ef29', 2, 1, 'MyApp', '[]', 0, '2019-06-17 14:20:04', '2019-06-17 14:20:04', '2020-06-17 14:20:04');
 INSERT INTO `oauth_access_tokens` VALUES ('79ff6ff67b3805dcc8e95f5e802b20a5137884f7ae51ad058b0f8480f071c6c72a6e8c1e5f08ab49', 2, 1, 'MyApp', '[]', 0, '2019-06-19 08:18:32', '2019-06-19 08:18:32', '2020-06-19 08:18:32');
@@ -980,17 +989,22 @@ INSERT INTO `oauth_access_tokens` VALUES ('826e068d775d21d4a42be19cfa3b7442952e2
 INSERT INTO `oauth_access_tokens` VALUES ('830b9b811bde283b7424f529c43531f008d032684d49c41990ef9d124c9a241184d28781b9590517', 2, 1, 'MyApp', '[]', 0, '2019-06-26 13:51:23', '2019-06-26 13:51:23', '2020-06-26 13:51:23');
 INSERT INTO `oauth_access_tokens` VALUES ('83870b82718ef447c79c7e9db8790703bdf0329fb1e613c304f0f99b2bf4593bad36d2a782eab02e', 2, 1, 'MyApp', '[]', 0, '2019-06-05 08:11:10', '2019-06-05 08:11:10', '2020-06-05 08:11:10');
 INSERT INTO `oauth_access_tokens` VALUES ('8582a0c2d267710eb00d2d4bd3e8cc64bea8bec6ec487da07d17ab417461f2167c6a06c0e77b7584', 2, 1, 'MyApp', '[]', 0, '2019-06-12 13:58:18', '2019-06-12 13:58:18', '2020-06-12 13:58:18');
+INSERT INTO `oauth_access_tokens` VALUES ('870922a6bf84220acb1de1b4982f8cef476e390083b1c2360427e5c9cec76fb16e94d6d2c180aa99', 26, 1, 'MyApp', '[]', 0, '2019-08-01 16:50:55', '2019-08-01 16:50:55', '2020-08-01 16:50:55');
 INSERT INTO `oauth_access_tokens` VALUES ('876e654cceb60a716206813893c111a0b7672ff9964d11cea3354474b82fc0b602bcf7c6e3952d82', 2, 1, 'MyApp', '[]', 0, '2019-06-25 16:19:17', '2019-06-25 16:19:17', '2020-06-25 16:19:17');
 INSERT INTO `oauth_access_tokens` VALUES ('87ebdd53ca407b004d09e3f2d1ffff6303130d3021ab06fe76604be837445cb72319de1ab339dab9', 2, 1, 'MyApp', '[]', 0, '2019-07-16 11:24:33', '2019-07-16 11:24:33', '2020-07-16 11:24:33');
+INSERT INTO `oauth_access_tokens` VALUES ('884df25b8d2d8f07c6f719da19f57485fb3be7e149fb1389890d0fe6f6daf674085200985f258dbb', 29, 1, 'MyApp', '[]', 0, '2019-08-01 17:50:50', '2019-08-01 17:50:50', '2020-08-01 17:50:50');
 INSERT INTO `oauth_access_tokens` VALUES ('893cde9fc94d443660ba6b1d87a11fb01d34df8e8e9c593b3edc565cb55a80ab33b26823f49fc2fa', 16, 1, 'MyApp', '[]', 0, '2019-05-18 08:56:34', '2019-05-18 08:56:34', '2020-05-18 08:56:34');
 INSERT INTO `oauth_access_tokens` VALUES ('8b5f83c4e18dee6cb0f4233f1416c202cda6d7b9a8d175c7bbdc1126a3493d15e25d18faf96ea047', 2, 1, 'MyApp', '[]', 0, '2019-05-15 15:08:05', '2019-05-15 15:08:05', '2020-05-15 15:08:05');
 INSERT INTO `oauth_access_tokens` VALUES ('8bf073bfb40c8f26daf32885f13fb64bad31f87d630b4cba4ad99cdcd242c7a3393946ccbc96961c', 2, 1, 'MyApp', '[]', 0, '2019-07-14 19:14:55', '2019-07-14 19:14:55', '2020-07-14 19:14:55');
+INSERT INTO `oauth_access_tokens` VALUES ('8c55d72f2cac537f3bcef521be4ae2e14f3cb4975f89ae7848ec9e3be343a7fc2822c350fe079d16', 2, 1, 'MyApp', '[]', 0, '2019-08-01 17:49:38', '2019-08-01 17:49:38', '2020-08-01 17:49:38');
 INSERT INTO `oauth_access_tokens` VALUES ('8d34e83c73e0dd3f8fb699b696a90ef7b292d24cba6394d48affc01774b6654b483bf904c6e620b8', 17, 1, 'MyApp', '[]', 0, '2019-05-17 09:42:32', '2019-05-17 09:42:32', '2020-05-17 09:42:32');
 INSERT INTO `oauth_access_tokens` VALUES ('8d50b826dacc986631f6304d16bde3a67224475800f3fe352915ce7c9e1208c90c53d7fb40d85446', 2, 1, 'MyApp', '[]', 0, '2019-06-11 20:27:25', '2019-06-11 20:27:25', '2020-06-11 20:27:25');
 INSERT INTO `oauth_access_tokens` VALUES ('8d8ec8fb690211ecf871b5357e0614a0c8dcd59d7b7b6feb02a67073f002f206a806c994c864cb93', 2, 1, 'MyApp', '[]', 0, '2019-06-08 22:40:03', '2019-06-08 22:40:03', '2020-06-08 22:40:03');
 INSERT INTO `oauth_access_tokens` VALUES ('8d8f42f3196d79e6d7a5f3df2dc3b1fe23965b534fda8f24e34aee9636e2c417658c0efd6eef68da', 2, 1, 'MyApp', '[]', 0, '2019-07-08 16:49:58', '2019-07-08 16:49:58', '2020-07-08 16:49:58');
 INSERT INTO `oauth_access_tokens` VALUES ('9046bc10022bc3fe333c454a67c0ad3f25ea3a6994d4cdb4b8dadcb37063eb027fa9e2493ba8bb55', 2, 1, 'MyApp', '[]', 0, '2019-06-27 13:36:37', '2019-06-27 13:36:37', '2020-06-27 13:36:37');
+INSERT INTO `oauth_access_tokens` VALUES ('93e3e9cc1d1dda63d76de5c82ac892695cfa728b2441d8d8e96cba0557f243bff7a31e28c208d749', 28, 1, 'MyApp', '[]', 0, '2019-08-01 16:56:43', '2019-08-01 16:56:43', '2020-08-01 16:56:43');
 INSERT INTO `oauth_access_tokens` VALUES ('991932e8988494f0559e93420d89944b3eb7ad7ad9046048915b19268abab6bb5cc1c62ee4cefca8', 2, 1, 'MyApp', '[]', 0, '2019-05-04 18:03:10', '2019-05-04 18:03:10', '2020-05-04 18:03:10');
+INSERT INTO `oauth_access_tokens` VALUES ('9a694520f6b84a7b83a6726a349cffa9dff332dec8d46fa0a8eca9395f152f61b622dcd7df980182', 24, 1, 'MyApp', '[]', 0, '2019-08-01 17:46:20', '2019-08-01 17:46:20', '2020-08-01 17:46:20');
 INSERT INTO `oauth_access_tokens` VALUES ('9b96e18443e36eb25a504938349045ab1a01ece7337b890779e6a61ae34ec4540a9a360c7811d30f', 2, 1, 'MyApp', '[]', 0, '2019-07-24 13:32:05', '2019-07-24 13:32:05', '2020-07-24 13:32:05');
 INSERT INTO `oauth_access_tokens` VALUES ('9bba88e9d87e0ec78a35d5257ca44a10e77506eb4cfb606041ce3d3db9520067a5767ec9f150fb1c', 2, 1, 'MyApp', '[]', 0, '2019-04-17 08:46:50', '2019-04-17 08:46:50', '2020-04-17 08:46:50');
 INSERT INTO `oauth_access_tokens` VALUES ('9da2db5f94161b541c8d644a7bbb0d3e24a9071e4af6254819690614d4e6eb720bdb87f7ea4ae47b', 2, 1, 'MyApp', '[]', 0, '2019-06-05 10:24:05', '2019-06-05 10:24:05', '2020-06-05 10:24:05');
@@ -1003,10 +1017,14 @@ INSERT INTO `oauth_access_tokens` VALUES ('a3ca726af4a336a81e728b7a9700a2813ba0e
 INSERT INTO `oauth_access_tokens` VALUES ('a4098adffd428a36ea6900bafba5da43b526d5c40ac7c35038321191e5688b2a6a7ea39de7bf23bf', 2, 1, 'MyApp', '[]', 0, '2019-07-04 21:12:12', '2019-07-04 21:12:12', '2020-07-04 21:12:12');
 INSERT INTO `oauth_access_tokens` VALUES ('a467a9d63cd99dd6e4c2de12e6730d10454fc36a5239c38d7e6663aec773db73a16b8b6c4681c6ac', 2, 1, 'MyApp', '[]', 0, '2019-07-30 08:21:13', '2019-07-30 08:21:13', '2020-07-30 08:21:13');
 INSERT INTO `oauth_access_tokens` VALUES ('a4a0d89cfacd2e4fa4ff8247f7a30acd12fb5adac78acb13f00cb1f66b2440f3dfd1616a8143abf4', 2, 1, 'MyApp', '[]', 0, '2019-03-06 08:23:41', '2019-03-06 08:23:41', '2020-03-06 08:23:41');
+INSERT INTO `oauth_access_tokens` VALUES ('a513e9b3e2f1079d416a65a1d94e4884c70c05621ecb0abdbef460283c0edef03555735fae3fe0b6', 24, 1, 'MyApp', '[]', 0, '2019-08-01 16:52:49', '2019-08-01 16:52:49', '2020-08-01 16:52:49');
 INSERT INTO `oauth_access_tokens` VALUES ('a7a8eae946a69943cd354815a800cd8823a8a3289b1b9b3f75bb1c7cf432546e0f9b065666e75da9', 2, 1, 'MyApp', '[]', 0, '2019-05-07 20:36:13', '2019-05-07 20:36:13', '2020-05-07 20:36:13');
+INSERT INTO `oauth_access_tokens` VALUES ('a83ee22ce98c9b1ee513e504ffce7a672c535f4eb868d7804a5660945f88dbec61d8fb8f856fb28b', 23, 1, 'MyApp', '[]', 0, '2019-08-01 16:40:25', '2019-08-01 16:40:25', '2020-08-01 16:40:25');
+INSERT INTO `oauth_access_tokens` VALUES ('a869cba2e864239b3fd7b0d8edbbc2be087267822ea3bcb4d9348f59225aca932af8f40745fc8a93', 18, 1, 'MyApp', '[]', 0, '2019-08-01 08:29:52', '2019-08-01 08:29:52', '2020-08-01 08:29:52');
 INSERT INTO `oauth_access_tokens` VALUES ('aaa4922e63eaef2d316628fa41754a6ea34bde6c4998dc25c77d17fcdf9c4878d3d971b24dabf735', 2, 1, 'MyApp', '[]', 0, '2019-04-17 15:11:02', '2019-04-17 15:11:02', '2020-04-17 15:11:02');
 INSERT INTO `oauth_access_tokens` VALUES ('aaad744270954488bca3097f31100a6db3e515a992982e33a868915cbe68bfe46437e8763b3ee497', 16, 1, 'MyApp', '[]', 0, '2019-05-17 16:04:59', '2019-05-17 16:04:59', '2020-05-17 16:04:59');
 INSERT INTO `oauth_access_tokens` VALUES ('ab868f37953c95ff2fe4eba6f02138cda88889d957d0e0d1fbcb6e3f7035ba4cfce82f5de6e6e275', 2, 1, 'MyApp', '[]', 0, '2019-04-08 15:11:24', '2019-04-08 15:11:24', '2020-04-08 15:11:24');
+INSERT INTO `oauth_access_tokens` VALUES ('ac72613869d4ae3e97a12b669f475f018845bac34378a7b4845011b7de543251bb1b8b3c7c15c567', 2, 1, 'MyApp', '[]', 0, '2019-08-01 22:52:54', '2019-08-01 22:52:54', '2020-08-01 22:52:54');
 INSERT INTO `oauth_access_tokens` VALUES ('b34a24a2b8c978632ec7c8cd362f41f0cd5037b8750e49401aa431751290bf418f54fd0539ff24cb', 16, 1, 'MyApp', '[]', 0, '2019-05-17 17:27:34', '2019-05-17 17:27:34', '2020-05-17 17:27:34');
 INSERT INTO `oauth_access_tokens` VALUES ('b45aaed65e12443d8460c6a8edb9a3da27db514ca07aecd2cc8057a47ed8d6f52460d50624ddedad', 2, 1, 'MyApp', '[]', 0, '2019-06-26 15:00:44', '2019-06-26 15:00:44', '2020-06-26 15:00:44');
 INSERT INTO `oauth_access_tokens` VALUES ('b45ae5222c4aa29bebf06a47f1f8451cad862cbededcebc663caa2dbb270ba58a9e6443faf4e81f3', 2, 1, 'MyApp', '[]', 0, '2019-06-01 08:07:35', '2019-06-01 08:07:35', '2020-06-01 08:07:35');
@@ -1019,6 +1037,7 @@ INSERT INTO `oauth_access_tokens` VALUES ('b832fe9b7abbe886c3d5b9d2bb96d31b9f4c9
 INSERT INTO `oauth_access_tokens` VALUES ('b8501e0320a46169a7dc8903e396f9301006a380db27d6af94129aac90c3f52a6e899de9fb558366', 2, 1, 'MyApp', '[]', 0, '2019-06-24 16:58:32', '2019-06-24 16:58:32', '2020-06-24 16:58:32');
 INSERT INTO `oauth_access_tokens` VALUES ('b8df5d41e814fe0747f1e4055f7a3616ea8b53c28c3f1ad51cfb66146666a1e451573b2838f287cd', 2, 1, 'MyApp', '[]', 0, '2019-07-25 08:12:34', '2019-07-25 08:12:34', '2020-07-25 08:12:34');
 INSERT INTO `oauth_access_tokens` VALUES ('b9d2f38ce6f67e2fc94907bd3382f20b84e79fa3050a4e9614aa329ea6d6599fa39a7811ab942bca', 18, 1, 'MyApp', '[]', 0, '2019-05-20 10:10:42', '2019-05-20 10:10:42', '2020-05-20 10:10:42');
+INSERT INTO `oauth_access_tokens` VALUES ('ba863d122de17d4aaf1ba38733c0da9cf955f1fc3301376fc516fec0bc043e7646fffea88845eba3', 23, 1, 'MyApp', '[]', 0, '2019-08-02 08:48:46', '2019-08-02 08:48:46', '2020-08-02 08:48:46');
 INSERT INTO `oauth_access_tokens` VALUES ('bb4f29906f22c4a681daa5ab02ac0dd7169f7c2478fa29ee3055b3c7849e361d3372d26ee01fa851', 15, 1, 'MyApp', '[]', 0, '2019-05-10 13:59:50', '2019-05-10 13:59:50', '2020-05-10 13:59:50');
 INSERT INTO `oauth_access_tokens` VALUES ('bc770cf7927b373b75211a1c39489e6147cc4d9dabf35e708ff7c5a0bc8382e322992a739a4c3b67', 2, 1, 'MyApp', '[]', 0, '2019-04-24 14:44:39', '2019-04-24 14:44:39', '2020-04-24 14:44:39');
 INSERT INTO `oauth_access_tokens` VALUES ('bcbed5ab3f6e097d6ad36bf6703f098f4954617ea8ca4946f4e9092267041d24430038e4f2bcc131', 2, 1, 'MyApp', '[]', 0, '2019-02-27 10:14:16', '2019-02-27 10:14:16', '2020-02-27 10:14:16');
@@ -1040,9 +1059,12 @@ INSERT INTO `oauth_access_tokens` VALUES ('cb694bfb52d361c2bef04d22bd8eca368f688
 INSERT INTO `oauth_access_tokens` VALUES ('ccdd05d158c5d97cd5658b2a653465e7a7562d4ab6e9e8dfb5485a61461b22e4f7da556ef81af426', 2, 1, 'MyApp', '[]', 0, '2019-06-18 08:14:28', '2019-06-18 08:14:28', '2020-06-18 08:14:28');
 INSERT INTO `oauth_access_tokens` VALUES ('cea0de1545baa2a5ea628ac3b342551f11148de095c54674f73b0c4495d96362c149485e48d18e8c', 2, 1, 'MyApp', '[]', 0, '2019-07-17 11:48:02', '2019-07-17 11:48:02', '2020-07-17 11:48:02');
 INSERT INTO `oauth_access_tokens` VALUES ('cf918b59b9a43555ab4f6e5b84e875962d123c549652d28071e013ea6c48681fe30d54221f43ddae', 2, 1, 'MyApp', '[]', 0, '2019-06-19 13:32:12', '2019-06-19 13:32:12', '2020-06-19 13:32:12');
+INSERT INTO `oauth_access_tokens` VALUES ('d02caadbe84fd28b0aa4211e62994ca49301e0262629b9ad5782f207df349048fdf60856309f9e1a', 27, 1, 'MyApp', '[]', 0, '2019-08-01 16:51:49', '2019-08-01 16:51:49', '2020-08-01 16:51:49');
 INSERT INTO `oauth_access_tokens` VALUES ('d09fe90b308eda2daac310b0eb9cdbc739b91fd9ffe51244f405fed15e77d197aba610704b72ec16', 2, 1, 'MyApp', '[]', 0, '2019-07-26 19:04:12', '2019-07-26 19:04:12', '2020-07-26 19:04:12');
 INSERT INTO `oauth_access_tokens` VALUES ('d13f0c2e4c697c9d7b266da46569f284d4b6dc87ae1a512b0afa005205e85a1ce2a2cc966684a4f4', 2, 1, 'MyApp', '[]', 0, '2019-04-13 08:19:03', '2019-04-13 08:19:03', '2020-04-13 08:19:03');
+INSERT INTO `oauth_access_tokens` VALUES ('d16f6d3038c011fb84bf52e54fe91bcb2af735135184c67aefb5cdac4040857cc4edad45f9706244', 2, 1, 'MyApp', '[]', 0, '2019-08-02 09:13:57', '2019-08-02 09:13:57', '2020-08-02 09:13:57');
 INSERT INTO `oauth_access_tokens` VALUES ('d2c8ca5403cc73031fc6f7fa1790164a9ebd28ec2603e4c5b24aa88c05cf3b043fbc7d953ea2066b', 2, 1, 'MyApp', '[]', 0, '2019-07-04 14:34:53', '2019-07-04 14:34:53', '2020-07-04 14:34:53');
+INSERT INTO `oauth_access_tokens` VALUES ('d54d9f21ea288de0d6177acf95a6c449bf591ad9a18e606950084437b54052f1602d7a9ea395beea', 18, 1, 'MyApp', '[]', 0, '2019-08-01 16:35:57', '2019-08-01 16:35:57', '2020-08-01 16:35:57');
 INSERT INTO `oauth_access_tokens` VALUES ('d5a2198f95ff44e5489155d375ff56a2b76a8ad74dc269ffa14eaa7f6e9298f5492a0b21da638837', 9, 1, 'MyApp', '[]', 0, '2019-05-07 19:17:11', '2019-05-07 19:17:11', '2020-05-07 19:17:11');
 INSERT INTO `oauth_access_tokens` VALUES ('d6a04bb62fee99a1c1caf96009a1e00a376a48fc772a1e7cf6c708bf3425f072b5cd16f0e84c6af9', 2, 1, 'MyApp', '[]', 0, '2019-05-05 16:24:06', '2019-05-05 16:24:06', '2020-05-05 16:24:06');
 INSERT INTO `oauth_access_tokens` VALUES ('d836e80f293b2fd237cab37db22dd7f18c9686084094ccffb02c22dc88c1f391d33ddd34bb90e14a', 16, 1, 'MyApp', '[]', 0, '2019-05-17 09:36:04', '2019-05-17 09:36:04', '2020-05-17 09:36:04');
@@ -1057,8 +1079,10 @@ INSERT INTO `oauth_access_tokens` VALUES ('df99239b883b868d17e70c88a2de5a2efadd0
 INSERT INTO `oauth_access_tokens` VALUES ('e4b9c34997f907f1d754dc13e2b2df744ba7e298a94eec05e2e14cce6e08532efd41b84a911d0421', 2, 1, 'MyApp', '[]', 0, '2019-07-12 08:36:29', '2019-07-12 08:36:29', '2020-07-12 08:36:29');
 INSERT INTO `oauth_access_tokens` VALUES ('e4fcd3c507c33197236ee600fbfae1890b5a381fc33d975f25d75637e37d17d743365529d69553bf', 2, 1, 'MyApp', '[]', 0, '2019-05-16 08:13:16', '2019-05-16 08:13:16', '2020-05-16 08:13:16');
 INSERT INTO `oauth_access_tokens` VALUES ('ea941ba89a58f6f69ffbfb65dbe8102486e5aee43526e3cc9ecc54db4dcfe71fb8db3d52882594de', 2, 1, 'MyApp', '[]', 0, '2019-02-28 08:53:52', '2019-02-28 08:53:52', '2020-02-28 08:53:52');
+INSERT INTO `oauth_access_tokens` VALUES ('eb199816de787761c0fd652f6de4ec75f903776d07c6b194692d121e399de87f979af0f20380331c', 18, 1, 'MyApp', '[]', 0, '2019-08-01 08:30:20', '2019-08-01 08:30:20', '2020-08-01 08:30:20');
 INSERT INTO `oauth_access_tokens` VALUES ('ec900d3d79ea229f630aec2aed91b68d07adedb5696c67b9be3312ec21c57b4d2952723e7dd7aafa', 2, 1, 'MyApp', '[]', 0, '2019-06-25 16:24:42', '2019-06-25 16:24:42', '2020-06-25 16:24:42');
 INSERT INTO `oauth_access_tokens` VALUES ('edd8592520c0805f08f3f4cb50be68a5dc7341d4061acdaada73e547da129b06e5553c1211d2051f', 2, 1, 'MyApp', '[]', 0, '2019-03-02 08:09:02', '2019-03-02 08:09:02', '2020-03-02 08:09:02');
+INSERT INTO `oauth_access_tokens` VALUES ('ee516afb3890478cad4d40604f06275ec5afdb0b7e2c3cb4d10b33e892e4a734d93d5a1415e1c818', 29, 1, 'MyApp', '[]', 0, '2019-08-01 17:51:07', '2019-08-01 17:51:07', '2020-08-01 17:51:07');
 INSERT INTO `oauth_access_tokens` VALUES ('ee9116e8e468f48e97d04ab45d5af40e24cbcb8ac12964c3a2db78f280a30aee8435aca20621761a', 2, 1, 'MyApp', '[]', 0, '2019-07-15 08:30:54', '2019-07-15 08:30:54', '2020-07-15 08:30:54');
 INSERT INTO `oauth_access_tokens` VALUES ('eebcb8b6c0881d51285f1b3175057a4d91c17aa90281daee2bf4b3fb622847bb7f493f11e12e601c', 2, 1, 'MyApp', '[]', 0, '2019-03-21 17:01:19', '2019-03-21 17:01:19', '2020-03-21 17:01:19');
 INSERT INTO `oauth_access_tokens` VALUES ('ef38df2fbf3c6ca485ce4e4b9f495d5653f0acedb9688d773dddf91572f84889879eecdd99f1b9c5', 2, 1, 'MyApp', '[]', 0, '2019-06-07 14:03:20', '2019-06-07 14:03:20', '2020-06-07 14:03:20');
@@ -1203,7 +1227,18 @@ CREATE TABLE `post_has_files`  (
   `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`idhasfile`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of post_has_files
+-- ----------------------------
+INSERT INTO `post_has_files` VALUES (1, 1, 'image', 0, '2019-08-01 11:44:32', '2019-08-01 11:44:32');
+INSERT INTO `post_has_files` VALUES (2, 3, 'image', 0, '2019-08-01 13:58:36', '2019-08-01 13:58:36');
+INSERT INTO `post_has_files` VALUES (3, 4, 'image', 0, '2019-08-01 14:14:35', '2019-08-01 14:14:35');
+INSERT INTO `post_has_files` VALUES (4, 5, 'image', 0, '2019-08-01 14:17:28', '2019-08-01 14:17:28');
+INSERT INTO `post_has_files` VALUES (5, 6, 'image', 0, '2019-08-01 14:18:10', '2019-08-01 14:18:10');
+INSERT INTO `post_has_files` VALUES (6, 9, 'image', 0, '2019-08-01 14:59:17', '2019-08-01 14:59:17');
+INSERT INTO `post_has_files` VALUES (7, 10, 'image', 0, '2019-08-01 15:40:52', '2019-08-01 15:40:52');
 
 -- ----------------------------
 -- Table structure for post_types
@@ -1247,7 +1282,25 @@ CREATE TABLE `posts`  (
   `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`idpost`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of posts
+-- ----------------------------
+INSERT INTO `posts` VALUES (1, NULL, 'http://localhost/thammy/tiem-cang-bong-da-mat-baby-face/', NULL, 2, 2, '2019-08-01 11:44:32', '2019-08-01 11:44:32');
+INSERT INTO `posts` VALUES (2, NULL, 'đã gọi điện', NULL, 4, NULL, '2019-08-01 12:04:11', '2019-08-01 12:04:11');
+INSERT INTO `posts` VALUES (3, NULL, 'http://localhost/thammy/#', NULL, 1, 2, '2019-08-01 13:58:36', '2019-08-01 13:58:36');
+INSERT INTO `posts` VALUES (4, NULL, 'http://localhost/thammy/#', NULL, 1, 2, '2019-08-01 14:14:35', '2019-08-01 14:14:35');
+INSERT INTO `posts` VALUES (5, NULL, 'https://thammyvienthienkhue.vn/tri-tan-nhang-yellow-laser-dieu-tri-nhanh-hieu-qua-toi-80/', NULL, 2, 3, '2019-08-01 14:17:28', '2019-08-01 14:17:28');
+INSERT INTO `posts` VALUES (6, NULL, 'https://thammyvienthienkhue.vn/tri-tan-nhang-yellow-laser-dieu-tri-nhanh-hieu-qua-toi-80/#', NULL, 1, 3, '2019-08-01 14:18:10', '2019-08-01 14:18:10');
+INSERT INTO `posts` VALUES (7, NULL, 'không bắt máy', NULL, 4, NULL, '2019-08-01 14:18:43', '2019-08-01 14:18:43');
+INSERT INTO `posts` VALUES (8, NULL, 'đặt lịch', NULL, 7, NULL, '2019-08-01 14:19:18', '2019-08-01 14:19:18');
+INSERT INTO `posts` VALUES (9, NULL, 'https://mgk.edu.vn/khai-giang/ ,khoa hoc chon: Phun thiêu thẩm mỹ', NULL, 2, 30, '2019-08-01 14:59:17', '2019-08-01 14:59:17');
+INSERT INTO `posts` VALUES (10, NULL, 'https://mgk.edu.vn/ ,khoa hoc chon: Chăm sóc da', NULL, 1, 30, '2019-08-01 15:40:52', '2019-08-01 15:40:52');
+INSERT INTO `posts` VALUES (11, NULL, 'khong bat mat', NULL, 4, NULL, '2019-08-01 17:04:38', '2019-08-01 17:04:38');
+INSERT INTO `posts` VALUES (12, NULL, 'k tl', NULL, 5, NULL, '2019-08-01 17:05:56', '2019-08-01 17:05:56');
+INSERT INTO `posts` VALUES (13, NULL, 'khòn bat mat', NULL, 4, NULL, '2019-08-01 17:47:22', '2019-08-01 17:47:22');
+INSERT INTO `posts` VALUES (14, NULL, 'ghgh', NULL, 8, NULL, '2019-08-01 17:52:19', '2019-08-01 17:52:19');
 
 -- ----------------------------
 -- Table structure for producthasfile
@@ -1395,7 +1448,7 @@ CREATE TABLE `profile`  (
   `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`idprofile`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of profile
@@ -1403,6 +1456,12 @@ CREATE TABLE `profile`  (
 INSERT INTO `profile` VALUES (1, '2', 'Hậu', 'Tấn', 'Dương', '1980-01-01 00:00:00', 'Số 7, Trần Quang Diệu, P14', 1, 1, 1, 3, 1, 1, '0967655819', 'about', 'facebook', 'zalo', 'uploads/2019/06/27/20190627_1561628641_5d148fe1d0be9.png', '2019-05-05 21:02:41', '2019-06-27 17:13:21');
 INSERT INTO `profile` VALUES (6, '15', 'hatazu', 'juong', 'zu', '1988-02-02 00:00:00', 'ninh thuan', 1, 1, 1, 4, 1, 0, '0125656556', '', '', '', 'uploads/2019/05/11/20190511_1557541962_5cd6344a2c218.png', '2019-05-08 22:13:47', '2019-06-27 11:27:35');
 INSERT INTO `profile` VALUES (7, '16', 'Dung', 'Thanh', 'Nguyễn', '1980-09-25 00:00:00', 'Đồng Nai', 1, 1, 1, 13, 1, 0, '0967655810', '', '', '', 'uploads/2019/05/17/20190517_1558084001_5cde79a1e2f65.png', '2019-05-17 09:36:04', '2019-06-27 11:27:47');
+INSERT INTO `profile` VALUES (8, '24', '', '', '', NULL, '', NULL, NULL, 0, 0, NULL, NULL, '', '', '', '', '', '2019-08-01 16:49:22', '2019-08-01 16:49:22');
+INSERT INTO `profile` VALUES (9, '25', '', '', '', NULL, '', NULL, NULL, 0, 0, NULL, NULL, '', '', '', '', '', '2019-08-01 16:49:58', '2019-08-01 16:49:58');
+INSERT INTO `profile` VALUES (10, '26', '', '', '', NULL, '', NULL, NULL, 0, 0, NULL, NULL, '', '', '', '', '', '2019-08-01 16:50:55', '2019-08-01 16:50:55');
+INSERT INTO `profile` VALUES (11, '27', '', '', '', NULL, '', NULL, NULL, 0, 0, NULL, NULL, '', '', '', '', '', '2019-08-01 16:51:50', '2019-08-01 16:51:50');
+INSERT INTO `profile` VALUES (12, '28', '', '', '', NULL, '', NULL, NULL, 0, 0, NULL, NULL, '', '', '', '', 'uploads/2019/08/01/20190801_1564654544_5d42bbd010d66.png', '2019-08-01 16:56:43', '2019-08-01 17:15:44');
+INSERT INTO `profile` VALUES (13, '29', '', '', '', NULL, '', NULL, NULL, 0, 0, NULL, NULL, '', '', '', '', '', '2019-08-01 17:50:50', '2019-08-01 17:50:50');
 
 -- ----------------------------
 -- Table structure for province
@@ -1614,17 +1673,22 @@ CREATE TABLE `users`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `users_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (2, 'admin', 'admin@mgkgroup.vn', NULL, '$2y$10$3Ds/XEHqtDG4jZpGUBdIPOQYy/9SgRsXb4pKD2B5eiU5SkeZBYWDG', '1wEdg9PWO5sJz7u2sJdeJJu0Z7U2LKwcIHgZM85DFHCeG2biHOgwtDEZ491c', '2019-02-27 10:14:15', '2019-06-27 15:31:50');
-INSERT INTO `users` VALUES (15, 'cskh1@mgkgroup.vn', 'cskh1@mgkgroup.vn', NULL, '$2y$10$tLkkIvZrXHlhgKxUCc0DoObdsdJ.Hglai8Sc1HaPi/hb/DPRzY2zS', 'hjPhKivYKcHQEFUanaB6jr5vePYDgjvrFBUGTbKX9KzEFOcIKYcr9iob4dAP', '2019-05-08 22:13:47', '2019-05-10 13:59:20');
+INSERT INTO `users` VALUES (2, 'admin', 'admin@mgkgroup.vn', NULL, '$2y$10$3Ds/XEHqtDG4jZpGUBdIPOQYy/9SgRsXb4pKD2B5eiU5SkeZBYWDG', 'GU2MQNe0lAQ8W7MbYVtKtixvCSlcHZyfcIQCXrS6ZuUADWVGl5c2qIXvlGie', '2019-02-27 10:14:15', '2019-06-27 15:31:50');
+INSERT INTO `users` VALUES (15, 'cskh1@mgkgroup.vn', 'cskh1@mgkgroup.vn', NULL, '$2y$10$QQCa0HdnBDnIbXmac1q3euNSAhSnCp9.75tzydSfab4Cpa88zEKoi', 'hjPhKivYKcHQEFUanaB6jr5vePYDgjvrFBUGTbKX9KzEFOcIKYcr9iob4dAP', '2019-05-08 22:13:47', '2019-08-01 16:39:29');
 INSERT INTO `users` VALUES (16, 'letan01dn', 'letan01dn@mgkgroup.vn', NULL, '$2y$10$GPgP6YIMxSp5S0pUj8MDmu97gE0Co4UIWKjNH3eLaYG7KBtdc7wV6', 'eOcQTpyMQvUYbC894ZGvSxivsDCMYr7xF35mqagEGtuommze8DZHJncb5wNQ', '2019-05-17 09:36:04', '2019-05-17 09:36:04');
 INSERT INTO `users` VALUES (17, 'letan01bd', 'letan01bd@mgkgroup.vn', NULL, '$2y$10$KH39/RhVD6ai0St8ZW0b6O9PGz5C0E1.l2F1lzfJVqNf5nO/dyCz6', NULL, '2019-05-17 09:36:49', '2019-05-17 09:36:49');
-INSERT INTO `users` VALUES (18, 'digital1', 'digital1@mgkgroup.vn', NULL, '$2y$10$h2zeZyxVFQbky62Kbz.q2OympEwRlfNecRc/cm7TDVwQGE3PmJ6Lu', NULL, '2019-05-17 09:39:23', '2019-05-17 09:39:23');
-INSERT INTO `users` VALUES (22, 'Tấn Hậu', 'admin2@mgkgroup.vn', NULL, '$2y$10$UHeFjyjCItmyIS9ZqIdX7uWMpCPI88ioZZQrVSdZF/pwkaBDqccDa', NULL, '2019-06-24 10:46:31', '2019-06-24 10:46:31');
+INSERT INTO `users` VALUES (18, 'digital1', 'digital1@mgkgroup.vn', NULL, '$2y$10$h2zeZyxVFQbky62Kbz.q2OympEwRlfNecRc/cm7TDVwQGE3PmJ6Lu', 'dslUs9Vmvfi3jEF3kJx0kD0FL6gqJNDbvuS8M4yk6OcOGXtZgGVWKEwvLpV6', '2019-05-17 09:39:23', '2019-05-17 09:39:23');
+INSERT INTO `users` VALUES (23, 'cskh2@mgkgroup.vn', 'cskh2@mgkgroup.vn', NULL, '$2y$10$FymjL7jOLo7VX9L2saQ9JOIg2c.mX67jM0P/XNSNEAQudxbo2E2ny', NULL, '2019-08-01 16:40:25', '2019-08-01 16:40:25');
+INSERT INTO `users` VALUES (24, 'cskh3@mgkgroup.vn', 'cskh3@mgkgroup.vn', NULL, '$2y$10$WOJe5BFGj5iwFnLcOD4ZpejjnbQmTQai0dCwHCFvjvL3fSI.N1XKm', NULL, '2019-08-01 16:49:21', '2019-08-01 16:49:21');
+INSERT INTO `users` VALUES (25, 'cskh4@mgkgroup.vn', 'cskh4@mgkgroup.vn', NULL, '$2y$10$W4MKtJvIWLkAvhw5dMcvPeHbmW1BOFUR.t5fiLGJGy2CN97THP2ge', NULL, '2019-08-01 16:49:58', '2019-08-01 16:49:58');
+INSERT INTO `users` VALUES (27, 'cskh6@mgkgroup.vn', 'cskh6@mgkgroup.vn', NULL, '$2y$10$v/qSfGpRPI/gMyVP8qYMFOEc3yybjeNSgLOzJ6ZZ.2zuqhIl3Nk8m', NULL, '2019-08-01 16:51:49', '2019-08-01 16:51:49');
+INSERT INTO `users` VALUES (28, 'cskhmgk01@mgkgroup.vn', 'cskhmgk01@mgkgroup.vn', NULL, '$2y$10$WfE64sKZUp21jJhQ8cIOu..3OGkdCm.gNVEP8mmfHoeP9rDeNkQiG', NULL, '2019-08-01 16:56:43', '2019-08-01 17:01:08');
+INSERT INTO `users` VALUES (29, 'cskh5@mgkgroup.vn', 'cskh5@mgkgroup.vn', NULL, '$2y$10$tiYAKeSW8n41rE67tplEwe6M6plZlS9VvpY5wGKD8YxmesB2TNVae', NULL, '2019-08-01 17:50:50', '2019-08-01 17:50:50');
 
 -- ----------------------------
 -- Table structure for ward
@@ -1663,7 +1727,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `AddMenuItemProcedure`;
 delimiter ;;
-CREATE PROCEDURE `AddMenuItemProcedure`(IN _idmenu int(11), IN _idcategory int(11), IN _idparent int(11), IN _depth int(11), IN _reorder int(11), IN _trash int(6))
+CREATE PROCEDURE `AddMenuItemProcedure`(IN `_idmenu` INT(11), IN `_idcategory` INT(11), IN `_idparent` INT(11), IN `_depth` INT(11), IN `_reorder` INT(11), IN `_trash` INT(6))
 BEGIN
                insert into menu_has_cate( idmenu, idcategory, idparent, depth, reorder, trash ) values ( _idmenu, _idcategory, _idparent, _depth, _reorder, _trash);
 							 select LAST_INSERT_ID() as idmenuhascate;
@@ -1690,7 +1754,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `CategoryByIdcatetype`;
 delimiter ;;
-CREATE PROCEDURE `CategoryByIdcatetype`(IN _idcatetype INT(11))
+CREATE PROCEDURE `CategoryByIdcatetype`(IN `_idcatetype` INT(11))
 BEGIN
                 select * from categories where idcattype = _idcatetype; 
             END
@@ -1733,7 +1797,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `CreateMenuHasIdCateProcedure`;
 delimiter ;;
-CREATE PROCEDURE `CreateMenuHasIdCateProcedure`(IN _str_query varchar(255))
+CREATE PROCEDURE `CreateMenuHasIdCateProcedure`(IN `_str_query` VARCHAR(255))
 BEGIN
                 SET @sqlv=_str_query;
                 PREPARE stmt FROM @sqlv;
@@ -2054,7 +2118,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `ListAllCateByIdcatetype`;
 delimiter ;;
-CREATE PROCEDURE `ListAllCateByIdcatetype`(IN _idcatetype int(11))
+CREATE PROCEDURE `ListAllCateByIdcatetype`(IN `_idcatetype` INT(11))
 BEGIN
                IF _idcatetype > 0 THEN
                     BEGIN
@@ -2086,7 +2150,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `ListCateByIdmenuProcedure`;
 delimiter ;;
-CREATE PROCEDURE `ListCateByIdmenuProcedure`(IN _idmenu int(11))
+CREATE PROCEDURE `ListCateByIdmenuProcedure`(IN `_idmenu` INT(11))
 BEGIN
                SELECT * FROM menu_has_cate WHERE idmenu=_idmenu;
             END
@@ -2251,7 +2315,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `ListItemCateByIdMenuProcedure`;
 delimiter ;;
-CREATE PROCEDURE `ListItemCateByIdMenuProcedure`(IN _idmenu int(11))
+CREATE PROCEDURE `ListItemCateByIdMenuProcedure`(IN `_idmenu` INT(11))
 BEGIN
                SELECT mnhas.idmenuhascate, mnhas.idmenu,mnhas.idcategory,(select namecat from categories where idcategory = mnhas.idcategory) as namemenu, mnhas.idparent, mnhas.reorder, mnhas.depth, mnhas.trash FROM menu_has_cate as mnhas WHERE idmenu=_idmenu ORDER BY reorder ASC;
             END
@@ -2460,11 +2524,23 @@ BEGIN
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for ListViewProductByIdCateProcedure
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `ListViewProductByIdCateProcedure`;
+delimiter ;;
+CREATE PROCEDURE `ListViewProductByIdCateProcedure`(IN _idcategory INT(11), IN _id_post_type INT(11), IN _id_status_type INT(11), IN _limit INT(11))
+BEGIN
+            select allpro.* from (SELECT alp.*,imp.price,imp.price_sale_origin from (select pro.*,(select urlfile from files WHERE idfile = pro.idfile) as url from (select chp.idproduct,p.namepro,p.slug,p.short_desc,p.description,p.idsize,p.idcolor,(select idfile from producthasfile where hastype = 'thumbnail' and idproduct = chp.idproduct ORDER BY idproducthasfile DESC LIMIT 1) as idfile from (SELECT * FROM catehasproduct WHERE idcategory=_idcategory) as chp JOIN products as p on chp.idproduct = p.idproduct) as pro) as alp JOIN (SELECT * from imp_products where idstore=31) as imp on alp.idproduct = imp.idproduct) as allpro order by allpro.idproduct DESC limit _limit;
+        END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for MenuHasIdcateProcedure
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `MenuHasIdcateProcedure`;
 delimiter ;;
-CREATE PROCEDURE `MenuHasIdcateProcedure`(IN _idmenu int(11),IN _idcategory int(11),IN _idparentmenu int(11))
+CREATE PROCEDURE `MenuHasIdcateProcedure`(IN `_idmenu` INT(11), IN `_idcategory` INT(11), IN `_idparentmenu` INT(11))
 BEGIN
                insert into menu_has_cate(idmenu,idcategory,idparentmenu) values (_idmenu,_idcategory,_idparentmenu);  
             END
@@ -2922,7 +2998,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `UpdateMenuHasCateProcedure`;
 delimiter ;;
-CREATE PROCEDURE `UpdateMenuHasCateProcedure`(IN _idmenuhascate int(11), IN _idmenu int(11),IN _idcategory int(11), IN _idparent int(11), IN _depth int(11), IN _reorder int(11), IN _trash int(11))
+CREATE PROCEDURE `UpdateMenuHasCateProcedure`(IN `_idmenuhascate` INT(11), IN `_idmenu` INT(11), IN `_idcategory` INT(11), IN `_idparent` INT(11), IN `_depth` INT(11), IN `_reorder` INT(11), IN `_trash` INT(11))
 BEGIN
                update menu_has_cate set idmenu=_idmenu, idcategory = _idcategory, idparent = _idparent, depth = _depth, reorder = _reorder, trash = _trash where idmenuhascate=_idmenuhascate;
             END
@@ -2934,7 +3010,7 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `UpdateMenuItemByIdhasProcedure`;
 delimiter ;;
-CREATE PROCEDURE `UpdateMenuItemByIdhasProcedure`(IN _str_query varchar(255))
+CREATE PROCEDURE `UpdateMenuItemByIdhasProcedure`(IN `_str_query` VARCHAR(255))
 BEGIN
                 SET @sqlv=_str_query;
                 PREPARE stmt FROM @sqlv;

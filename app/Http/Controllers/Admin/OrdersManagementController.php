@@ -43,8 +43,7 @@ class OrdersManagementController extends Controller
             $list_selected['_idcategory'] = $_idcategory;
             $list_selected['_id_post_type'] = $_id_post_type;
             $list_selected['_id_status_type'] = $_id_status_type;
-            $list_selected['_sel_receive'] = $_sel_receive;
-            
+            $list_selected['_sel_receive'] = $_sel_receive;           
             $qr_orderlist = DB::select('call ListOrderProductProcedure(?,?,?,?,?,?)',array($_start_date,$_end_date, $_idcategory, $_id_post_type, $_id_status_type,$_sel_receive));
             $rs_orderlist = json_decode(json_encode($qr_orderlist), true);
             return View('admin.orderlist.index')->with(compact('rs_orderlist'))->with(compact('list_selected'));
