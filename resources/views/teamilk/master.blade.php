@@ -40,7 +40,7 @@
   <link href="{{ asset('assets-tea/assets/demos/default/css/themes/default.css') }}" rel="stylesheet" id="style_theme" type="text/css">
   <link href="{{ asset('assets-tea/css/main-style.css?v=0.0.9') }}" rel="stylesheet" type="text/css">
   <!-- END THEME STYLES -->
-  <link rel="shortcut icon" href="{{ asset('assets-tea/images/favicon.ico') }}">
+  <link rel="shortcut icon" href="{{ asset('assets-tea/images/favicon.png') }}">
  {{--  <link rel="shortcut icon" href="favicon.ico"> --}}
    @yield('other_styles')
 </head>

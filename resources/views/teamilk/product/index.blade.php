@@ -13,9 +13,9 @@
 			<h4 class="">Page Sub Title Goes Here</h4>
 		</div>
 		<ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
-															<li><a href="shop-product-grid.htm">Product Grid</a></li>
+			<li><a href="shop-product-grid.htm">Product Grid</a></li>
 			<li>/</li>
-															<li class="c-state_active">Jango Components</li>
+			<li class="c-state_active">Jango Components</li>
 									
 		</ul>
 	</div>
